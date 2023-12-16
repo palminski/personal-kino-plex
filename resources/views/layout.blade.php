@@ -10,6 +10,7 @@
 
 <body>
     <h1>Title</h1>
+    @include('partials.navigation')
     <hr>
     @yield('content')
     <hr>
