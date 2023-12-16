@@ -1,8 +1,7 @@
 <nav>
+    
     <ul>
-        <li>Kino-Order</li>
         <li> <a href="/">Home</a></li>
-        <li>Choice 1</li>
-        <li>Choice 1</li>
+        <li><a href="https://palminski.github.io/myriad-conniptions/" target="_blank">My Portfolio</a></li>
     </ul>
 </nav>

@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', 'Kino Order')</title>
+    <link rel="stylesheet" href={{asset("assets/css/style.css")}}>
 </head>
 
 <body>
-    <h1>Title</h1>
     @include('partials.navigation')
-    <hr>
+    <br>
     @yield('content')
-    <hr>
+    
 </body>
 
 </html>
