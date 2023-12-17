@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DataController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -16,3 +17,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/data', [DataController::class, 'showForm'])->name('show-form');
+
+Route::post('/submit-form', [DataController::class, 'handleSubmit'])->name('submit-form');

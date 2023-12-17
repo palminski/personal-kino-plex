@@ -2,6 +2,7 @@
     
     <ul>
         <li> <a href="/">Home</a></li>
+        <li> <a href="/data">Data</a></li>
         <li><a href="https://palminski.github.io/myriad-conniptions/" target="_blank">My Portfolio</a></li>
     </ul>
 </nav>
