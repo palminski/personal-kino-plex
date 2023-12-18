@@ -20,4 +20,6 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/data', [DataController::class, 'showForm'])->name('show-form');
 
+Route::get('/show-data', [DataController::class, 'showData'])->name('show-data');
+
 Route::post('/submit-form', [DataController::class, 'handleSubmit'])->name('submit-form');

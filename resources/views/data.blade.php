@@ -17,10 +17,10 @@
             @csrf
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" required>
-
+            <br>
             <label for="info">Info:</label>
             <input type="text" name="info" id="info" required>
-
+            <br>
             <button type="submit">Submit</button>
         </form>
     </div>

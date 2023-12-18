@@ -14,15 +14,19 @@ class HomeController extends Controller
         return $this->rabit;
     }
 
-    public function index()
+    public function index(Request $request)
     {
         $willVariable = 776;
         $this->swapRabit();
         $this->swapRabit();
+
+        $formData = $request->session()->get('formData', []);
+
         return view(
             'home',
             ['willVariable' => $willVariable,
-            'rabit' => $this->rabit]
+            'rabit' => $this->rabit,
+            'formData' => $formData]
         );
     }
 }
