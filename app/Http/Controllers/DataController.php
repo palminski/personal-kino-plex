@@ -37,4 +37,10 @@ class DataController extends Controller
             ['formData' => $formData]
         );
     }
+
+    public function clearSession(Request $request) {
+        $request->session()->flush();
+
+        return redirect('/')->with('status', 'Session was cleared!');
+    }
 }
