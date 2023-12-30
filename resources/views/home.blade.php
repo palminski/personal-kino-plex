@@ -13,12 +13,29 @@
     <br>
     <div class="block" >
         <h1>Hello World</h1>
-        <h2>Is rabit variable truthy? => {{ $rabit ? 'Yes' : 'No' }}</h2>
-        <h2>Value stored in $willVariable => {{ $willVariable }}</h2>
+        @if (Auth::check())
+            <h2>Logged in as {{Auth:user()->username}}</h2>
+        @else
+        @include('components.login-form')
+        @endif
+        
     </div>
     <br>
     <div class="block">
-        <h1>Session Data</h1>
+        @include('components.signup-form')
+    </div>
+    <br>
+    <div class="block">
+        <h1>DATA</h1>
+        <hr>
+        @if ($users)
+            <ul>
+                @foreach ($users as $user)
+                    <li>{{$user->username}}</li>
+                @endforeach
+            </ul>
+            <hr>
+        @endif
         @if ($formData)
             <p><strong>Name:</strong> {{ $formData['name'] ?? '[Not Provided]' }}</p>
             <p><strong>Info:</strong> {{ $formData['info'] ?? '[Not Provided]' }}</p>

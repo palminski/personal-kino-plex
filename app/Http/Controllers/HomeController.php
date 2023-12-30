@@ -3,30 +3,33 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     private bool $rabit = true;
 
-    private function swapRabit() {
+    private function swapRabit()
+    {
         $this->rabit = !$this->rabit;
         return $this->rabit;
     }
 
     public function index(Request $request)
     {
-        $willVariable = 776;
-        $this->swapRabit();
-        $this->swapRabit();
+
 
         $formData = $request->session()->get('formData', []);
 
+        $users = User::select('username')->get();
+
         return view(
             'home',
-            ['willVariable' => $willVariable,
-            'rabit' => $this->rabit,
-            'formData' => $formData]
+            [
+                'users' => $users,
+                'formData' => $formData
+            ]
         );
     }
 }
